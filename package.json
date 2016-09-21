@@ -1,7 +1,7 @@
 {
   "name": "akademien",
   "version": "0.0.1",
-  "description": "",
+  "description": "nothing here...",
   "main": "./dist/index.js",
   "scripts": {
     "test": "echo 'no tests'",
@@ -49,5 +49,13 @@
     "prefixed-range": "0.0.3",
     "sequential-resolve": "0.2.0",
     "x-ray": "2.3.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rogerbf/akademien.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rogerbf/akademien/issues"
+  },
+  "homepage": "https://github.com/rogerbf/akademien#readme"
 }
