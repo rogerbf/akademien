@@ -1,54 +1,46 @@
 {
   "name": "akademien",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "svenska akademien",
-  "main": "./dist/index.js",
+  "main": "./build/akademien.cjs.js",
   "scripts": {
-    "test": "echo 'no tests'",
-    "prebuild": "npm test && rimraf dist",
-    "build": "babel --ignore *.test.js --out-dir dist src",
-    "prepublish": "npm run build",
-    "start": "npm run build && node ./dist/index.js",
-    "start:watch": "nodemon --watch src -x npm run start"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c",
+    "prepublish": "npm run lint && npm run format && nsp check && npm run build",
+    "lint": "eslint source",
+    "format": "prettier-standard \"source/**/*.js\""
   },
-  "keywords": ["name-day", "namnsdag", "namnsdagar"],
-  "author": "rogerbf <roger@bergfalk.nu> (http://bergfalk.nu/)",
+  "keywords": [
+    "svenska akademien",
+    "namnsdag",
+    "namnsdagar",
+    "name day",
+    "nameday"
+  ],
+  "author": "rogerbf <roger@bergfa.lk> (http://bergfa.lk/)",
   "license": "MIT",
   "devDependencies": {
-    "babel-cli": "6.14.0",
-    "babel-preset-es2015": "6.14.0",
-    "nodemon": "1.10.2",
-    "rimraf": "2.5.4"
+    "babel-eslint": "7.2.3",
+    "babel-plugin-external-helpers": "6.22.0",
+    "babel-preset-env": "1.6.0",
+    "babel-preset-stage-3": "6.24.1",
+    "eslint-config-standard": "10.2.1",
+    "eslint-plugin-import": "2.7.0",
+    "eslint-plugin-node": "5.1.1",
+    "eslint-plugin-promise": "3.5.0",
+    "eslint-plugin-standard": "3.0.1",
+    "nsp": "2.7.0",
+    "prettier-standard": "6.0.0",
+    "rollup": "0.49.2",
+    "rollup-plugin-babel": "2.7.1"
   },
+  "module": "./build/akademien.esm.js",
   "files": [
-    "dist",
+    "build",
     "README.md"
   ],
-  "eslintConfig": {
-    "env": {
-      "node": true
-    },
-    "parserOptions": {
-      "ecmaVersion": 6,
-      "sourceType": "module"
-    },
-    "rules": {
-      "quotes": [
-        "error",
-        "backtick"
-      ]
-    }
-  },
-  "babel": {
-    "presets": [
-      "es2015"
-    ]
-  },
   "dependencies": {
-    "moment": "2.15.1",
-    "prefixed-range": "0.0.3",
-    "sequential-resolve": "0.2.0",
-    "x-ray": "2.3.0"
+    "x-ray": "2.3.2"
   },
   "repository": {
     "type": "git",
