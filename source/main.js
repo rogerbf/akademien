@@ -1,9 +1,2 @@
-import namedayScraper from "./nameday-scraper"
-import namedayNames from "./nameday-names"
-
-export default {
-  nameday: {
-    scrape: namedayScraper,
-    names: namedayNames
-  }
-}
+export { default as scraper } from './nameday-scraper'
+export { default as names } from './nameday-names'
