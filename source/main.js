@@ -1,1 +1,1 @@
-export { default as nameday } from './nameday/nameday'
+export { default as namedays } from "./namedays/namedays"
