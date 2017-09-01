@@ -1,6 +1,6 @@
 {
   "name": "akademien",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "svenska akademien",
   "main": "./build/akademien.cjs.js",
   "scripts": {
