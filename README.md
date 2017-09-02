@@ -1,9 +1,30 @@
 # akademien
 
+## usage
+
+```javascript
+import akademien from "akademien"
+
+akademien.namedays.lookup(`gunilla`)
+// {
+//   name: 'Gunilla',
+//   date: { month: 1, day: 30 },
+//   included: true,
+//   info: 'http://www.svenskaakademien.se/almanackan/gunilla'
+// }
+
+```
+
 ## api
 
-### `akademien.namedays.names`
+### `.namedays.lookup(q)`
 
-### `akademien.namedays.lookup`
+```q``` &lt;String&gt; or &lt;Date&gt;
 
-### `akademien.namedays.scrape`
+### `.namedays.names`
+
+&lt;Array&gt;
+
+### `.namedays.scrape()`
+
+Returns a &lt;Promise&gt;
