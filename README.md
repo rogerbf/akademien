@@ -1,5 +1,7 @@
 # akademien
 
+Unofficial interface for [svenskaakademien.se](http://www.svenskaakademien.se).
+
 ## usage
 
 ```javascript
